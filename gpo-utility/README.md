@@ -34,6 +34,6 @@ A simple utility to prove Pi's GPOs are working, and to validate your LED wiring
     `python3 gpo_utility.py config_quick.json`
     
 The LEDs will blink first in sequence, then all blink simultaneously.
-See video **raspberry-pi-blink-leds.mp4** in this folder for an example of what this looks like.
+See video [here](https://rumble.com/vi8wt5-raspberry-pi-gpo-led-controller.html)
 
 
