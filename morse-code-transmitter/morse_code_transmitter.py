@@ -38,7 +38,8 @@ class MorseCodeTransmitter:
         self.config = jsons.loads(json_config, cls=MorseConfig)
         self.config.dot_duration_seconds = max(self.config.min_wait_seconds, self.config.dot_duration_seconds)
         self.config.dash_duration_seconds = max(self.config.min_wait_seconds, self.config.dash_duration_seconds)
-        self.config.inter_symbol_wait_seconds = max(self.config.min_wait_seconds, self.config.inter_symbol_wait_seconds)
+        self.config.inter_symbol_wait_seconds = max(self.config.min_wait_seconds,
+                                                    self.config.inter_symbol_wait_seconds)
         self.config.inter_char_wait_seconds = max(self.config.min_wait_seconds, self.config.inter_char_wait_seconds)
         self.config.inter_word_wait_seconds = max(self.config.min_wait_seconds, self.config.inter_word_wait_seconds)
         self.config.string_to_send = self.config.string_to_send.upper()

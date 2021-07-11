@@ -1,6 +1,6 @@
 # Raspberry Pi Journal
 
-##Table of Contents
+## Table of Contents
 
 [Purchase](#purchase)
 

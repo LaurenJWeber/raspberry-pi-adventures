@@ -54,5 +54,3 @@ If operating in continual repeat mode, press `Enter` to break out of the loop an
 ## References
 
 [International Morse Code Alphabet](https://en.wikipedia.org/wiki/Morse_code#/media/File:International_Morse_Code.svg)
-
-## TODO
