@@ -1,5 +1,15 @@
 # Raspberry Pi Journal
 
+##Table of Contents
+
+[Purchase](#purchase)
+
+[Preparation](#preparation)
+
+[Initial Setup](#initial-setup)
+
+[Python Programs](#python-on-the-pi)
+
 ## Purchase
 
 Raspberry Pi Model 4B
@@ -74,7 +84,18 @@ and control it from my other workstation.
 
 ## Python on the Pi
 
- The Raspberry Pi OS image included [Thonny](https://thonny.org/), a simple and friendly Python IDE.
- I flipped the mode from basic to standard, tweaked the font size to be a littler smaller and started a first program 
- to control the LEDs.  Here is the first [simple utility](gpo-utility). 
+### First GPIO Program
 
+The Raspberry Pi OS image included [Thonny](https://thonny.org/), a simple and friendly Python IDE.
+I flipped the mode from basic to standard, tweaked the font size to be a littler smaller and started a first program 
+to control the LEDs.  Here is the first [simple utility](gpo-utility). 
+
+### More GPIO Fun - Morse Code Transmitter
+
+Building on the idea of the previous GPO tester, I decided to make a simple utility to 
+transmit a string via blinking [Morse Code](morse-code-transmitter) on the LEDs.  
+Not the most advanced broadband communications system, but a fun learning opportunity nonetheless.
+This one makes use of 
+[basic threading operations](https://docs.python.org/3/library/threading.html#threading.Thread) 
+and a [simple queue](https://docs.python.org/3/library/queue.html) 
+to allow gracefully breaking out of the transmit loop.  
