@@ -5,6 +5,7 @@ from queue import SimpleQueue, Empty
 from threading import Thread
 from argparse import ArgumentParser
 
+CONTINUAL_REPEAT = 0
 CONFIG_ERROR = 1
 DOT = '.'
 DASH = '-'
@@ -90,7 +91,7 @@ class MorseCodeTransmitter:
 
 
 def transmitter(morse_transmitter, max_repetitions, message_queue):
-    continual_operation = max_repetitions == 0
+    continual_operation = max_repetitions == CONTINUAL_REPEAT
     i = 0
     while i < max_repetitions or continual_operation:
         morse_transmitter.transmit_string()
@@ -109,7 +110,7 @@ def main():
     parser.add_argument("config_file", type=str, help="Path to config file")
     parser.add_argument("repetitions",
                         type=int,
-                        help="Number of times to repeat message, 0 for continual repeat",
+                        help=f"Number of times to repeat message, {CONTINUAL_REPEAT} for continual repeat",
                         nargs='?',
                         default=1
                         )
@@ -123,7 +124,7 @@ def main():
     send_thread = Thread(target=transmitter, args=(my_morse_transmitter, args.repetitions, msg_queue))
     send_thread.start()
     
-    if args.repetitions == 0:
+    if args.repetitions == CONTINUAL_REPEAT:
         input("** Press enter to quit. **\n")
         print("==>Received user input.  Transmitter will stop after current iteration.")
         msg_queue.put(finish_signal)
