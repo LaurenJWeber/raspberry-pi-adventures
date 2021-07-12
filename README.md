@@ -13,6 +13,8 @@ Programs for the Raspberry Pi; these have been tested against model 4B (8GB).
 
 [Simple GPO utility](gpo-utility)
 
+[Morse Code Transmitter](morse-code-transmitter)
+
 *More to come!* 
 
 ## Activity Journal
